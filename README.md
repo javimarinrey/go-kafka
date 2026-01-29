@@ -14,11 +14,13 @@ docker exec -it kafka /opt/kafka/bin/kafka-topics.sh --bootstrap-server localhos
 
 Ejecutar productor y consumidor
 ```
-go run consumer.go
+go run consumer_aggregate.go
 ```
+Cada 1 min hace resumen de métricas leídas
 ```
 go run producer.go
 ```
+Envía unos 500K/min de mensajes a Kafka
 
 Ver CPU/RAM de kafka
 ```
